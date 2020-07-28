@@ -4,9 +4,9 @@ D=varargin{1};
 
 [Sup,NN,RNN,NNN,nb,A]=NaNSearching(D);
 % index1=find(nb==0);
-[CPV,CP,Pr1,Pr2,r1,rf,r2,Nei1,CL,dev]=findCenter2(D,NN,NNN,A,nb);
-% index2=find(dev<(mean(dev)-2.5*std(dev)));%ÔëÉùµã
-index=find(dev>(mean(dev)-(0.5)*std(dev)));%ºËĞÄµã
+[dev]=findCenter2(D,NN,NNN,A,nb);
+% index2=find(dev<(mean(dev)-2.5*std(dev)));%å™ªå£°ç‚¹
+index=find(dev>(mean(dev)-(0.5)*std(dev)));%æ ¸å¿ƒç‚¹
 end
 
 
@@ -16,9 +16,9 @@ D=varargin{1};
 r=1;
 nb=zeros(size(D,1),1);
 C=cell(size(D,1),1);
-NN=cell(size(D,1),1);%³õÊ¼»¯Ã¿¸öµãµÄKNNÁÚ¾Ó
-RNN=cell(size(D,1),1);%³õÊ¼»¯Ã¿¸öµãµÄRKNNÁÚ¾Ó
-NNN=cell(size(D,1),1);%ÊÇNNºÍRNNµÄ½»¼¯£¬Ò²¾ÍÃ¿¸öµãµÄ
+NN=cell(size(D,1),1);%åˆå§‹åŒ–æ¯ä¸ªç‚¹çš„KNNé‚»å±…
+RNN=cell(size(D,1),1);%åˆå§‹åŒ–æ¯ä¸ªç‚¹çš„RKNNé‚»å±…
+NNN=cell(size(D,1),1);%æ˜¯NNå’ŒRNNçš„äº¤é›†ï¼Œä¹Ÿå°±æ¯ä¸ªç‚¹çš„
 A=pdist2(D,D);
 Numb1=0;
 Numb2=0;
