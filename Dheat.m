@@ -78,7 +78,7 @@ for kk=1:size(D,1)
          r1(ii)=1*max(pdist2(D(ii,:),D(NN{ii},:)));
 		 Nei1{ii}=find(A(:,ii)<r1(ii));         
          Pr1(ii)=size(Nei1{ii},1);
-         dev(ii)=log(Pr1(ii))-2*log(r1(ii)+1);
+         dev(ii)=log(Pr1(ii))-(size(D,2))*log(r1(ii)+1);
 		else
            r1(ii)=0;
            dev(ii)=0;
