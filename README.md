@@ -1,2 +1,2 @@
 # NMST-DP
-The code is used for the article "NMST-DP: A novel minimum spanning tree clustering algorithm based on density peaks".
+The code is used for the article "A parameter-free clustering algorithm based on density peaks and minimum spanning tree".
